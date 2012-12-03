@@ -11667,6 +11667,10 @@ static status_t onf_config1_1_capable_switch_logical_switches_switch_controllers
 {
     status_t res = NO_ERR;
     val_value_t *errorval = (curval) ? curval : newval;
+    
+    printf("\nhebele\n");
+    val_dump_value(curval,0);
+    val_dump_value(newval,0);
 
     if (LOGDEBUG) {
         log_debug("\nEnter onf_config1_1_capable_switch_logical_switches_switch_controllers_controller_ip_address_edit callback for %s phase",

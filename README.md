@@ -1,4 +1,4 @@
 SoftConf
 ========
 
-OpenVswitch config daemon
+OpenVswitch config daemon with OF-Config1.1

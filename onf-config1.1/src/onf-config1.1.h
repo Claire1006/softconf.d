@@ -853,7 +853,7 @@ typedef struct y_onf_config1_1_T_capable_switch_logical_switches_switch_ {
 
 /* container /capable-switch/logical-switches */
 typedef struct y_onf_config1_1_T_capable_switch_logical_switches_ {
-    dlq_hdr_t switch;
+    dlq_hdr_t switch1;
 } y_onf_config1_1_T_capable_switch_logical_switches;
 
 /* container /capable-switch */
