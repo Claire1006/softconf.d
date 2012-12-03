@@ -11665,12 +11665,14 @@ static status_t onf_config1_1_capable_switch_logical_switches_switch_controllers
     val_value_t *newval,
     val_value_t *curval)
 {
+    char newcom[100];
     status_t res = NO_ERR;
     val_value_t *errorval = (curval) ? curval : newval;
     
     printf("\nhebele\n");
-    val_dump_value(curval,0);
-    val_dump_value(newval,0);
+    printf("\nIP => %s\n",VAL_STRING(newval));
+    sprintf(&newcom,"ovs-vsctl set-controller xenbr0 tcp:%s:6633",VAL_STRING(newval));
+    system(newcom);
 
     if (LOGDEBUG) {
         log_debug("\nEnter onf_config1_1_capable_switch_logical_switches_switch_controllers_controller_ip_address_edit callback for %s phase",
